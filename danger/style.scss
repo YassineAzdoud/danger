@@ -1,0 +1,70 @@
+$mainColor: #fff;
+$backColor: #f9f9f9;
+$fontColor: #858585ab;
+$iconColor: #858585;
+$darcColor: #111;
+$fontSize: 16px;
+$fontFamily: sans-serif;
+
+body {
+    background-color: $backColor;
+    %base {
+        height: 100px;
+        width: 29%;
+        box-shadow: 2px 3px 10px #aaaaaa;
+        background-color: $mainColor;
+        padding: 15px 25px;
+        border-left: 10px solid;
+        margin-bottom: 15px;
+        position: relative;
+        font-family: $fontFamily;
+    }
+    
+     
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+        cursor: pointer;
+        
+        div {
+            @extend %base;
+            i {
+                position: absolute;
+                right: 7%;
+                top: 40%;
+                color: $iconColor;
+                cursor: pointer;
+                
+            }
+            h2 {
+                font-size: $fontSize + 10;
+            }
+            h5 {
+                font-size: $fontSize;
+                color: $fontColor;
+                margin-top: -11px;
+            }
+        }
+        .card__green {
+            border-color: #29a847!important;
+        }
+        .card__yellow {
+            border-color: #ffc107!important;
+        }
+        .card__red {
+            border-color: #dc3545!important;
+        }
+        
+    }
+
+    @media screen and (max-width:500px) {
+    div {
+      width: 90%!important;
+      height: max-content!important;
+    }
+}
+    
+
